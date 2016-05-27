@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<project>
+  <fileVersion>2</fileVersion>
+  <fileChecksum>4023663486</fileChecksum>
+  <configuration>
+    <name>Debug</name>
+    <outputs>
+      <file>$PROJ_DIR$\Debug\Obj\ComUart01.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\ComUart02.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\ComUart05.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\ComUart03.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\ComUart05.pbi</file>
+      <file>$TOOLKIT_DIR$\inc\msp430g2553.h</file>
+      <file>$TOOLKIT_DIR$\lib\dlib\dl430fn.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\ComUart04.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\ComUart04.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\ComUart03.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\ComUart02.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\ComUart01.pbi</file>
+      <file>$TOOLKIT_DIR$\inc\intrinsics.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\Interface.pbd</file>
+      <file>$PROJ_DIR$\ComUart03.c</file>
+      <file>$PROJ_DIR$\Debug\Obj\ComUart01.r43</file>
+      <file>$PROJ_DIR$\ComUart02.c</file>
+      <file>$PROJ_DIR$\Debug\Obj\ComUart03.r43</file>
+      <file>$PROJ_DIR$\Debug\Exe\Interface.ulp</file>
+      <file>$TOOLKIT_DIR$\inc\in430.h</file>
+      <file>$TOOLKIT_DIR$\config\linker\lnk430g2553.xcl</file>
+      <file>$PROJ_DIR$\ComUart04.c</file>
+      <file>$PROJ_DIR$\ComUart05.c</file>
+      <file>$PROJ_DIR$\ComUart01.c</file>
+      <file>$PROJ_DIR$\..\ComUart02\ComUart02.c</file>
+      <file>$PROJ_DIR$\Debug\Exe\Interface.d43</file>
+    </outputs>
+    <file>
+      <name>[ROOT_NODE]</name>
+      <outputs>
+        <tool>
+          <name>XLINK</name>
+          <file> 25</file>
+        </tool>
+        <tool>
+          <name>ULP430</name>
+          <file> 18</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\ComUart03.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 3</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 9</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 17</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 19 12 5</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 5 19 12</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\ComUart02.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 10</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 1</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 19 12 5</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 5 19 12</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\ComUart04.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 7</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 8</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 12 19 5</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 5 19 12</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\ComUart05.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 4</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 2</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 12 19 5</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 5 19 12</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\ComUart01.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 11</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 0</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 15</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 12 19 5</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 5 19 12</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\ComUart02\ComUart02.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 10</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 1</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 19 12 5</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 5 19 12</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\Debug\Exe\Interface.d43</name>
+      <inputs>
+        <tool>
+          <name>XLINK</name>
+          <file> 20 2 6</file>
+        </tool>
+      </inputs>
+    </file>
+  </configuration>
+  <configuration>
+    <name>Release</name>
+    <outputs/>
+    <forcedrebuild>
+      <name>[MULTI_TOOL]</name>
+      <tool>XLINK</tool>
+    </forcedrebuild>
+  </configuration>
+</project>
+
+
