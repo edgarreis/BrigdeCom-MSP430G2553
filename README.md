@@ -1,0 +1,1 @@
+# BrigdeCom-MSP430G2553
