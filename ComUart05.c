@@ -10,7 +10,8 @@ unsigned int int_rec;           // Dado recebido pela UART
 //unsigned char data_send = 0x06; // Dado enviado pela UART
 int flag_pisca = 0;             // Usado para verificar se o buffer esta cheio
 int x;                          // Flag x
-int int_buffer_ADC10;               // Variavel para o Buffer do Conversor ADC10
+int int_buffer_ADC10;           // Variavel para o Buffer do Conversor ADC10
+int Tscaler = 0;                // Tempo do Escalonador do Timer
 //unsigned char buffer;           // Variavel para o Buffer
 char char_buffer_ADC10[5];
 
@@ -96,11 +97,23 @@ void config_uC(void)
     TACCTL0 |= CCIE;		   	/* Habilita captura/comparação com relação a IFG */
          
     /* Timer A Capture/Compare 0 */
-    TA0CCR0 = 0xFF;            // Valor Máximo da Contagem
+    TA0CCR0 = 64000;            // Valor Máximo da Contagem (0xFA00 = 64000)
+    
+    /* Calculo Escalonador
+    Timer para envio dos dados = 4s
+    Tt0 = div / clk = 2 / 8M = 250ns
+    
+    250E-9s -> 250
+    4E0s  -> 4E9
+    
+    N = 4E9 / 250 = 16E6
+    Tscaler = 16E6 / 64E3 = 250
+    */
+    
     //TA0CCR1 = 0xFF;              // tempo em up recebe valor do Buffer
     
-    /* Configuração ADC */
     
+    /* Configuração ADC */
     /* ADC10 Control 0 */
     ADC10CTL0|= (SREF_0 + ADC10SHT_2 + MSC + ADC10ON + ADC10IE);
     /* VR+ = AVCC and VR- = AVSS */
@@ -177,15 +190,22 @@ int main (void){
  #pragma vector = TIMER0_A0_VECTOR       // Interrupção do Timer
  __interrupt void TIMER0_A (void) 
 {
-   P1OUT ^= BIT6;              // Sinalizar interrupção
+  Tscaler++;
+  
+  if( Tscaler == 250){
+    
+    P1OUT ^= BIT6;              // Sinalizar interrupção
    
-   // Envia ACD para UART
-   itoa(int_buffer_ADC10, char_buffer_ADC10, 10);          // int to char base 10
-   send_text(char_buffer_ADC10);
-   send_byte('\n');
-   __delay_cycles(4000000);	// delay de 1ms
-   
-   TA0CCTL0 &=~ CCIFG;                  //Limpar flag de interrupção 
+    // Envia ACD para UART
+    itoa(int_buffer_ADC10, char_buffer_ADC10, 10);          // int to char base 10
+    send_text(char_buffer_ADC10);
+    send_byte('\n');
+    //__delay_cycles(30000000);	// delay de 1ms
+    
+    Tscaler = 0;
+  }
+  
+  TA0CCTL0 &=~ CCIFG;                  //Limpar flag de interrupção 
 
 }
 
